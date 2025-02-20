@@ -1,0 +1,6 @@
+ansible web1:web2 -m command -a "ls -l /root"
+ansible database@example.com -m raw -a "uptime; yum check-update; lsblk"
+ansible nodes -m shell -a "find / -type f -g=s -user root -group root"
+ansible nodes -m fetch -a "src=/root/ dest=/bkp/"
+ansible nodes -m get_url -a "url=https://ansible.mohit.fun/playbook/hwreort.yml dest=/root/"
+
